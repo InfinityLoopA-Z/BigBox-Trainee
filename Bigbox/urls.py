@@ -6,7 +6,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
-    path('api/', include('apps.core.api')),
+    path('polls/', include('apps.polls.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) # noqa
 
 if settings.DEBUG:

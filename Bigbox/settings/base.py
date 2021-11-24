@@ -52,12 +52,15 @@ THIRD_PARTY_APPS = [
 ]
 
 LOCAL_APPS = [
-    'apps.core.apps.CoreConfig',
+    'apps.polls.apps.PollsConfig',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
 # Passwords
+
+# Allowed Hosts
+ALLOWED_HOSTS = env.list('DJANGO_ALLOWED_HOSTS', default=['*'])
 
 PASSWORD_HASHERS = [
     'django.contrib.auth.hashers.Argon2PasswordHasher',
