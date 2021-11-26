@@ -4,7 +4,7 @@ from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.utils import timezone
 from rest_framework import viewsets
-# from rest_framework import permissions
+from rest_framework import permissions
 
 from .models import Choice, Question
 from .serializers import QuestionSerializer, ChoiceSerializer
@@ -17,7 +17,7 @@ class QuestionViewSet(viewsets.ModelViewSet):
     queryset = Question.objects.all()
     serializer_class = QuestionSerializer
     permission_classes = [
-        # permissions.IsAuthenticated
+        permissions.IsAuthenticated
     ]
 
 
@@ -28,7 +28,7 @@ class ChoiceViewSet(viewsets.ModelViewSet):
     queryset = Choice.objects.all()
     serializer_class = ChoiceSerializer
     permission_classes = [
-        # permissions.IsAuthenticated
+        permissions.IsAuthenticated
     ]
 
 
