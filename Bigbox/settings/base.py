@@ -49,6 +49,7 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'django_filters',
     'debug_toolbar',
+    'graphene_django',
 ]
 
 LOCAL_APPS = [
@@ -160,6 +161,11 @@ ADMINS = [
     ('felixhc', 'felixhumbertocarabajal5@gmail.com'),
 ]
 MANAGERS = ADMINS
+
+# GraphQL
+GRAPHENE = {
+    'SCHEMA': 'apps.polls.schema.schema',
+}
 
 # Django REST Framework
 
